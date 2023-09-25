@@ -2,17 +2,15 @@ package com.example.lesson03.domain;
 
 import java.util.Date;
 
-// 일반 자바 bean
 public class Review {
 	private int id;
 	private int storeId;
 	private String menu;
 	private String userName;
-	private Double point; // null 가능한 Wrapper Class 인 Double 이용
+	private Double point; // null 가능
 	private String review;
 	private Date createdAt;
 	private Date updatedAt;
-	
 	
 	public int getId() {
 		return id;
@@ -38,10 +36,10 @@ public class Review {
 	public void setUserName(String userName) {
 		this.userName = userName;
 	}
-	public double getPoint() {
+	public Double getPoint() {
 		return point;
 	}
-	public void setPoint(double point) {
+	public void setPoint(Double point) {
 		this.point = point;
 	}
 	public String getReview() {
@@ -62,7 +60,4 @@ public class Review {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	
-	
-	
 }
