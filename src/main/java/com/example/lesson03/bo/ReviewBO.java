@@ -30,6 +30,18 @@ public class ReviewBO {
 			String userName, Double point, String review) { // Integer로 하면 nullable로 착각할 수 있다
 		return reviewMapper.insertReviewAsField(storeId, menu, userName, point, review);
 	}
+	
+	// input: id, review
+	// output: int(성공된 행의 개수)
+	public int updateReviewById(int id, String review) {
+		return reviewMapper.updateReviewById(id, review);
+	}
+	
+	// input : id
+	// output : int
+	public void deleteReviewById (int id) {
+		reviewMapper.deleteReviewById(id);
+	}
 }
 
 
