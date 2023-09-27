@@ -23,6 +23,4 @@ public class Lesson03Ex03RestController {
 		return "변경 완료 : " + rowCount; //String => HTML
 	}
 	
-	
-	
 }
