@@ -134,9 +134,7 @@
 					
 					, error:function(request, status, error) {
 						// 에러일 때 수행됨 (400, 500...)
-						alert(request);
-						alert(status);
-						alert(error);
+						alert("추가에 실패했습니다. 관리자에게 문의해주세요.")
 					}
 					
 					
