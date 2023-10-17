@@ -23,6 +23,7 @@ public class Lesson06Controller {
 	private UserBO userBO;
 	
 	// =====================  ex02 ==========================
+	
 	//http://localhost/lesson06/ex02/join-view
 	@GetMapping("/ex02/join-view")
 	public String joinView() {
