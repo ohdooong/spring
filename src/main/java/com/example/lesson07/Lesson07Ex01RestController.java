@@ -30,6 +30,16 @@ public class Lesson07Ex01RestController {
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
 	
-	// 강의 34분까지봄
+	
+	// U : Update
+	@GetMapping("/2")
+	public StudentEntity update() {
+		// id : 4 dreamJob을 변경
+		// 응답값 : JSON    =>   RestController에 포함된 ResponseBody에 의해서 jackson lib이 동작할 것임.
+		
+		return studentBO.updateStudentDreamJobById(3, "디자이너");
+		
+	}
+	
 	
 }

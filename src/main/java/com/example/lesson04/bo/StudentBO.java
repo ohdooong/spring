@@ -47,4 +47,24 @@ public class StudentBO {
 		return studentRepository.save(student);
 	}
 	
+	// input: id, dreamJob			output:변경된 StudentEntity
+	public StudentEntity updateStudentDreamJobById(int id, String dreamJob) {
+		StudentEntity student = studentRepository.findById(id).orElse(null);   // Optional 문법으로 기존 객체 가지고온다.
+		if (student != null) {
+			
+			// 기존값은 유지하고 세팅된 일부의 값만 변경 => 내가 원하는 값만 변경한다. (dreamJob만 변경)
+			// => toBuilder
+			
+			student = student.toBuilder()   // 기존값 유지
+				.dreamJob(dreamJob)
+				.build();
+			
+			// update
+			studentRepository.save(student);	// db update 후 다시 select 된 결과!!!!!!!!
+		}
+		
+		return student;	//    null 또는 변경된 데이터
+	}
+	
+	
 }

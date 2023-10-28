@@ -10,5 +10,6 @@ public interface StudentRepository extends JpaRepository<StudentEntity, Integer>
 	
 	// Spring Data JPA : JpaRepository
 	
-	
+	// save()   -   insert, update
+	// findById() -  select by id
 }
