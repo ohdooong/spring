@@ -30,4 +30,6 @@ public class Lesson07Ex01RestController {
 		return studentBO.addStudent(name, phoneNumber, email, dreamJob);
 	}
 	
+	// 강의 34분까지봄
+	
 }
